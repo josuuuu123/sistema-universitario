@@ -1,15 +1,13 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DocentesModule } from './docentes/docentes.module';
-import { EspecialidadesModule } from './especialidades/especialidades.module';
-import { CarrerasModule } from './carreras/carreras.module';
-import { CiclosModule } from './ciclos/ciclos.module';
-import { MateriasModule } from './materias/materias.module';
-import { EstudiantesModule } from './estudiantes/estudiantes.module';
+import { EjemplosModule } from './ejemplos/ejemplos.module';
+import { UserModule } from './user/user.module';
+import { PostModule } from './post/post.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [DocentesModule, EspecialidadesModule, CarrerasModule, CiclosModule, MateriasModule, EstudiantesModule],
+  imports: [EjemplosModule, UserModule, PostModule, PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })
